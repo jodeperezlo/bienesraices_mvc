@@ -2,5 +2,5 @@
 //
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
-
-console.log('Hello World!');
+export const generateId = () =>
+  Math.random().toString(32).substring(2) + Date.now().toString(32);

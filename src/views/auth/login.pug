@@ -1,0 +1,22 @@
+extends ../layout/index
+
+block content
+  .py-10
+    h1.text-4xl.my-10.font-extrabold.text-center.text-slate-900 Bienes
+      span.font-normal.text-slate-700 Raices
+    h2.text-center.text-2xl.font-extrabold.text-slate-900= title
+
+    .mt-8.mx-auto.max-w-md
+      .bg-white.py-8.px-4.shadow
+        form
+          .mb-4
+            label.block.text-slate-600.text-sm.font-bold.mb-2(for="email") Correo Electrónico
+            input#name.border.border-gray-300.p-2.rounded-md.w-full.placeholder-gray-400(type="email", name="email", placeholder="Escribe tu correo electrónico")
+          .mb-4
+            label.block.text-slate-600.text-sm.font-bold.mb-2(for="password") Contraseña
+            input#name.border.border-gray-300.p-2.rounded-md.w-full.placeholder-gray-400(type="password", name="password", placeholder="Escribe tu contraseña")
+          .mb-4
+            input(class=" bg-slate-700 text-white rounded-md p-2 w-full cursor-pointer font-bold hover:bg-slate-600 transition duration-150 ease-out hover:ease-in" type="submit" value="Inicia sesión")
+          .mb-4.flex.items-center.justify-between
+            a(class="block text-slate-600 text-xs text-center hover:text-slate-500 transition duration-150 ease-out hover:ease-in" href="/auth/register") ¿No tienes una cuenta? Regístrate gratis aquí
+            a(class="block text-slate-600 text-xs text-center hover:text-slate-500 transition duration-150 ease-out hover:ease-in" href="/auth/forgot-password") Olvidé mi contraseña
